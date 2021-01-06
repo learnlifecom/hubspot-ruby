@@ -1,0 +1,133 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.hubapi.com/email/public/v1/subscriptions/test@<HAPI_KEY>.com?hapikey=<HAPI_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 05 Jan 2021 12:17:10 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d153bf281707cc17692f4eca5f923fc8c1609849030; expires=Thu, 04-Feb-21
+        12:17:10 GMT; path=/; domain=.hubapi.com; HttpOnly; SameSite=Lax
+      X-Trace:
+      - 2B1E0915B79742B36802452A8DE1BE15FF26F9F002000000000000000000
+      X-Hubspot-Ratelimit-Daily:
+      - '1000000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '999336'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Remaining:
+      - '159'
+      X-Hubspot-Ratelimit-Max:
+      - '160'
+      X-Hubspot-Ratelimit-Secondly:
+      - '16'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '15'
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 077413dfda000097b4a988c000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 60cd22795bae97b4-FRA
+    body:
+      encoding: ASCII-8BIT
+      string: '{"subscribed":true,"markedAsSpam":false,"unsubscribeFromPortal":false,"portalId":62515,"bounced":true,"email":"test@<HAPI_KEY>.com","subscriptionStatuses":[],"status":"subscribed"}'
+  recorded_at: Tue, 05 Jan 2021 12:17:10 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/email/public/v1/subscriptions/john@doe.com?hapikey=<HAPI_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 05 Jan 2021 12:56:03 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d78ad606276aa21f6b49b8705972d0f581609851363; expires=Thu, 04-Feb-21
+        12:56:03 GMT; path=/; domain=.hubapi.com; HttpOnly; SameSite=Lax
+      X-Trace:
+      - 2BBA157D5100EBA5D6EC491B3A1909B4C930FD7E28000000000000000000
+      X-Hubspot-Ratelimit-Daily:
+      - '1000000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '999298'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Remaining:
+      - '158'
+      X-Hubspot-Ratelimit-Max:
+      - '160'
+      X-Hubspot-Ratelimit-Secondly:
+      - '16'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '15'
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '07743779280000bece5c13d000000001'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 60cd5b6eaae1bece-FRA
+    body:
+      encoding: ASCII-8BIT
+      string: '{"subscribed":true,"markedAsSpam":false,"unsubscribeFromPortal":false,"portalId":62515,"bounced":true,"email":"john@doe.com","subscriptionStatuses":[],"status":"subscribed"}'
+  recorded_at: Tue, 05 Jan 2021 12:56:03 GMT
+recorded_with: VCR 6.0.0

@@ -15,13 +15,47 @@ module Hubspot
       @marked_as_spam = response_hash['markedAsSpam']
       @bounced        = response_hash['bounced']
       @status         = response_hash['status']
-      @subscription_statuses  = response_hash['SubscriptionStatuses']
+      @subscription_statuses  = response_hash['subscriptionStatuses']
     end
 
     class << self
-      def status(email)
+      def status(email:)
         response = Hubspot::Connection.get_json(SUBSCRIPTION_PATH, {email_address: email})
         new(response)
+      end
+
+      def opt_in(email:, type_id:, legal_explanation: "")
+        response = Hubspot::Connection.put_json(SUBSCRIPTION_PATH,
+          params: { email_address: email },
+          body: {
+            subscriptionStatuses: [
+              {
+                id: type_id,
+                subscribed: true,
+                optState: "OPT_IN",
+                legalBasis: "LEGITIMATE_INTEREST_CLIENT",
+                legalBasisExplanation: legal_explanation
+              }
+            ],
+            portalSubscriptionLegalBasis: "LEGITIMATE_INTEREST_CLIENT",
+            portalSubscriptionLegalBasisExplanation: legal_explanation
+          }
+        )
+      end
+
+      def opt_out(email:, type_id:)
+        response = Hubspot::Connection.put_json(SUBSCRIPTION_PATH,
+          params: { email_address: email },
+          body: {
+            subscriptionStatuses: [
+              {
+                id: type_id,
+                subscribed: false,
+                optState: "OPT_OUT",
+              }
+            ],
+          }
+        )
       end
     end
   end

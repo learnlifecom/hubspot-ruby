@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://api.hubapi.com/email/public/v1/subscriptions/john@doe.com?hapikey=demo
+    body:
+      encoding: UTF-8
+      string: '{"subscriptionStatuses":[{"id":8398069,"subscribed":true,"optState":"OPT_IN","legalBasis":"LEGITIMATE_INTEREST_CLIENT","legalBasisExplanation":"User
+        opted in through Leanlife platform."}],"portalSubscriptionLegalBasis":"LEGITIMATE_INTEREST_CLIENT","portalSubscriptionLegalBasisExplanation":"User
+        opted in through Leanlife platform."}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 05 Jan 2021 13:09:18 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '16'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d350f2d25a789a89980e2e0f8db6b89b91609852158; expires=Thu, 04-Feb-21
+        13:09:18 GMT; path=/; domain=.hubapi.com; HttpOnly; SameSite=Lax
+      X-Trace:
+      - 2BE52DF41436FB23EA5CAABC935CAD90D92C8D401B000000000000000000
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249907'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Remaining:
+      - '99'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '9'
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '0774439a3a00001f4507ba0000000001'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 60cd6ed6cc331f45-FRA
+    body:
+      encoding: UTF-8
+      string: '{"success":true}'
+  recorded_at: Tue, 05 Jan 2021 13:09:18 GMT
+recorded_with: VCR 6.0.0

@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.hubapi.com/email/public/v1/subscriptions/john@doe.com?hapikey=demo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 05 Jan 2021 13:09:18 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '266'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d5a6b5c36f51ae6901d543470506e2c051609852158; expires=Thu, 04-Feb-21
+        13:09:18 GMT; path=/; domain=.hubapi.com; HttpOnly; SameSite=Lax
+      X-Trace:
+      - 2B4FAC61AC78B20C58A0A913D830151CD49448FB80000000000000000000
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249906'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Remaining:
+      - '98'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '9'
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '0774439b420000dfdbd229e000000001'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 60cd6ed86abfdfdb-FRA
+    body:
+      encoding: ASCII-8BIT
+      string: '{"subscribed":true,"markedAsSpam":false,"unsubscribeFromPortal":false,"portalId":7104703,"bounced":true,"email":"john@doe.com","subscriptionStatuses":[{"id":8398069,"updatedAt":1609852158635,"subscribed":true,"optState":"OPT_IN","legalBasis":"LEGITIMATE_INTEREST_CLIENT","legalBasisExplanation":"User
+        opted in through Leanlife platform."}],"status":"subscribed"}'
+  recorded_at: Tue, 05 Jan 2021 13:09:18 GMT
+recorded_with: VCR 6.0.0

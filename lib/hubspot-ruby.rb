@@ -23,6 +23,7 @@ require 'hubspot/deprecator'
 require 'hubspot/owner'
 require 'hubspot/engagement'
 require 'hubspot/subscription'
+require 'hubspot/subscription_type'
 require 'hubspot/oauth'
 
 module Hubspot

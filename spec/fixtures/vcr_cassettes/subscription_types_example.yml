@@ -1,0 +1,84 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.hubapi.com/email/public/v1/subscriptions?hapikey=<HAPI_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 05 Jan 2021 11:55:46 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '532'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dc53128238bb6873fe4e9af0caa533c041609847746; expires=Thu, 04-Feb-21
+        11:55:46 GMT; path=/; domain=.hubapi.com; HttpOnly; SameSite=Lax
+      X-Trace:
+      - 2B96EB31BB1BE8A552FA7EA5F38FB24205F8FBC3E2000000000000000000
+      X-Hubspot-Ratelimit-Daily:
+      - '1000000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '999361'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Remaining:
+      - '158'
+      X-Hubspot-Ratelimit-Max:
+      - '160'
+      X-Hubspot-Ratelimit-Secondly:
+      - '16'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '15'
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '077400485a00001f2d0b92f000000001'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 60cd03208b901f2d-FRA
+    body:
+      encoding: ASCII-8BIT
+      string: '{"subscriptionDefinitions":[{"id":354586,"portalId":62515,"name":"Abandoned
+        Cart","description":"abandoned cart","active":true,"internal":false,"category":"Marketing","channel":"Email"},{"id":5476312,"portalId":62515,"name":"another
+        blog Subscription","description":"Receive timely updates with the latest blog
+        posts.","active":false,"internal":false,"category":"Marketing","channel":"Email"},{"id":4744389,"portalId":62515,"name":"API
+        Demonstration Blog Subscription","description":"Receive updates about the
+        latest blog posts.","active":true,"internal":false,"category":"Marketing","channel":"Email"},{"id":5479310,"portalId":62515,"name":"Blog
+        - ES Subscription","description":"Receive timely updates with the latest blog
+        posts.","active":false,"internal":false,"category":"Marketing","channel":"Email"},{"id":5583924,"portalId":62515,"name":"<HAPI_KEY>blog
+        Subscription","description":"Receive timely updates with the latest blog posts.","active":false,"internal":false,"category":"Marketing","channel":"Email"},{"id":230318,"portalId":62515,"name":"dynamic
+        send email","description":"customize the from email and name on each email","active":true,"internal":false,"category":"Marketing","channel":"Email"},{"id":6914043,"portalId":62515,"name":"Example
+        blog Subscription","description":"Receive timely updates with the latest blog
+        posts.","active":true,"internal":false},{"id":2849,"portalId":62515,"name":"Marketing
+        Information","description":"Marketing offers and updates.","active":true,"internal":false,"category":"Marketing","channel":"Email","internalName":"MARKETING_INFORMATION"},{"id":5375287,"portalId":62515,"name":"test
+        blog Subscription","description":"Receive timely updates with the latest blog
+        posts.","active":false,"internal":false},{"id":6497985,"portalId":62515,"name":"TestKimBlog
+        Subscription","description":"Receive timely updates with the latest blog posts.","active":false,"internal":false},{"id":1281663,"portalId":62515,"name":"One
+        to One","description":"One to One emails","active":true,"internal":true,"category":"Sales","channel":"Email","internalName":"ONE_TO_ONE"},{"id":4447431,"portalId":62515,"name":"MyTypeMSG","description":"MyMSG","active":true,"internal":false,"category":"Marketing","channel":"Email","order":0}]}'
+  recorded_at: Tue, 05 Jan 2021 11:55:46 GMT
+recorded_with: VCR 6.0.0
