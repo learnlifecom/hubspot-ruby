@@ -57,6 +57,12 @@ module Hubspot
           }
         )
       end
+
+      # https://community.hubspot.com/t5/APIs-Integrations/How-to-generate-the-unsubscribe-link-for-a-user/m-p/233820
+      def preferences_url(email:, host: ENV.fetch("HUBSPOT_EMAIL_HOST", "") )
+        encoded_email = Base64.encode64("{\"ea\": \"#{email}\"}")
+        "#{host}/hs/manage-preferences/unsubscribe?d=#{encoded_email}&v=2"
+      end
     end
   end
 end

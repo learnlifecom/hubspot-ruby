@@ -89,4 +89,17 @@ describe Hubspot::Subscription do
       })
     end
   end
+
+  describe ".preferences_url" do
+    it "encodes email to d param" do
+      encoded = Base64.encode64("{\"ea\": \"test@demo.com\"}")
+      url = described_class.preferences_url(email: 'test@demo.com')
+      expect(url).to include("/hs/manage-preferences/unsubscribe?d=#{encoded}&v=2")
+    end
+
+    it "allows to pass custom host" do
+      url = described_class.preferences_url(email: 'test@demo.com', host: 'https://testhost.com')
+      expect(url).to include("https://testhost.com")
+    end
+  end
 end
