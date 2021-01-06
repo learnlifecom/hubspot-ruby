@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.hubapi.com/crm/v3/objects/contacts/search?hapikey=<POST_HAPI_KEY>
+    body:
+      encoding: UTF-8
+      string: '{"filterGroups":[{"filters":[{"value":"1609883579773","propertyName":"lastmodifieddate","operator":"GTE"}]}],"after":null,"limit":25}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 06 Jan 2021 21:53:00 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '212'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d6de708d5b888a8b27c582592d4e24d831609969980; expires=Fri, 05-Feb-21
+        21:53:00 GMT; path=/; domain=.hubapi.com; HttpOnly; SameSite=Lax
+      X-Trace:
+      - 2B43B224792F3B57C4F3B4084FECA7996882BD6C21000000000000000000
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249855'
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 077b496a2e0000f9e67b0c8000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 60d8ab56ae66f9e6-PRG
+    body:
+      encoding: ASCII-8BIT
+      string: '{"total":1,"results":[{"id":"24251","properties":{"createdate":"2020-12-04T14:19:14.291Z","email":"robinbortlik@gmail.com","firstname":null,"hs_object_id":"24251","lastmodifieddate":"2021-01-06T11:49:56.683Z","lastname":null},"createdAt":"2020-12-04T14:19:14.291Z","updatedAt":"2021-01-06T11:49:56.683Z","archived":false}]}'
+  recorded_at: Wed, 06 Jan 2021 21:53:00 GMT
+recorded_with: VCR 6.0.0
