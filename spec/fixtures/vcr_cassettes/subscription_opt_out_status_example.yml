@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.hubapi.com/email/public/v1/subscriptions/john@doe.com?hapikey=demo
+    uri: https://api.hubapi.com/email/public/v1/subscriptions/john@doetest.com?hapikey=<POST_HAPI_KEY>
     body:
       encoding: US-ASCII
       string: ''
@@ -19,22 +19,22 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 05 Jan 2021 13:09:19 GMT
+      - Thu, 07 Jan 2021 12:19:11 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '195'
+      - '198'
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d5b3f1158bee005ef8491d7d1575580931609852159; expires=Thu, 04-Feb-21
-        13:09:19 GMT; path=/; domain=.hubapi.com; HttpOnly; SameSite=Lax
+      - __cfduid=d47db67463d8752e8a9991e30b448ddcf1610021951; expires=Sat, 06-Feb-21
+        12:19:11 GMT; path=/; domain=.hubapi.com; HttpOnly; SameSite=Lax
       X-Trace:
-      - 2BF3B1EF9EE546BD097F7EA42749D95B59C55A6BD0000000000000000000
+      - 2BCA2E5D48CF3FA95C7F64CB05529480EB3FD3B328000000000000000000
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249904'
+      - '249983'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Remaining:
@@ -52,7 +52,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Cf-Request-Id:
-      - '0774439cfa0000dffb72244000000001'
+      - 077e626fd000004120449c7000000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Strict-Transport-Security:
@@ -60,9 +60,9 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 60cd6edb2debdffb-FRA
+      - 60dda02c7ae34120-PRG
     body:
       encoding: ASCII-8BIT
-      string: '{"subscribed":true,"markedAsSpam":false,"unsubscribeFromPortal":false,"portalId":7104703,"bounced":true,"email":"john@doe.com","subscriptionStatuses":[{"id":8398069,"updatedAt":1609852159087,"subscribed":true,"optState":"NOT_OPTED"}],"status":"subscribed"}'
-  recorded_at: Tue, 05 Jan 2021 13:09:19 GMT
+      string: '{"subscribed":true,"markedAsSpam":false,"unsubscribeFromPortal":false,"portalId":7104703,"bounced":false,"email":"john@doetest.com","subscriptionStatuses":[{"id":8398069,"updatedAt":1610021951240,"subscribed":false,"optState":"OPT_OUT"}],"status":"subscribed"}'
+  recorded_at: Thu, 07 Jan 2021 12:19:11 GMT
 recorded_with: VCR 6.0.0

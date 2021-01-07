@@ -1,14 +1,12 @@
 ---
 http_interactions:
 - request:
-    method: put
-    uri: https://api.hubapi.com/email/public/v1/subscriptions/john@doetest.com?hapikey=<POST_HAPI_KEY>
+    method: get
+    uri: https://api.hubapi.com/email/public/v1/subscriptions/john@doetest2.com?hapikey=<POST_HAPI_KEY>
     body:
-      encoding: UTF-8
-      string: '{"subscriptionStatuses":[{"id":8398069,"subscribed":false,"optState":"OPT_OUT"}]}'
+      encoding: US-ASCII
+      string: ''
     headers:
-      Content-Type:
-      - application/json
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -21,26 +19,26 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 07 Jan 2021 12:19:11 GMT
+      - Thu, 07 Jan 2021 12:23:12 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Content-Length:
-      - '16'
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d7e62d035c4b4b7f3d18bc88d7983116a1610021951; expires=Sat, 06-Feb-21
-        12:19:11 GMT; path=/; domain=.hubapi.com; HttpOnly; SameSite=Lax
+      - __cfduid=deef8814e059f185853c152fd7940828f1610022192; expires=Sat, 06-Feb-21
+        12:23:12 GMT; path=/; domain=.hubapi.com; HttpOnly; SameSite=Lax
       X-Trace:
-      - 2B263737A655334CCCCEC8126AFB41D720A528AF0F000000000000000000
+      - 2BB697A294EEC7DE56861F499E1D05074B7D67602A000000000000000000
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249984'
+      - '249980'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Remaining:
-      - '97'
+      - '98'
       X-Hubspot-Ratelimit-Max:
       - '100'
       X-Hubspot-Ratelimit-Secondly:
@@ -54,7 +52,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Cf-Request-Id:
-      - 077e626eab0000f9ce14928000000001
+      - 077e661ddf000041323f8b8000000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Strict-Transport-Security:
@@ -62,9 +60,9 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 60dda02aaa3bf9ce-PRG
+      - 60dda60fc8c64132-PRG
     body:
-      encoding: UTF-8
-      string: '{"success":true}'
-  recorded_at: Thu, 07 Jan 2021 12:19:11 GMT
+      encoding: ASCII-8BIT
+      string: '{"subscribed":false,"markedAsSpam":false,"unsubscribeFromPortal":true,"portalId":7104703,"bounced":false,"email":"john@doetest2.com","subscriptionStatuses":[],"status":"unsubscribed"}'
+  recorded_at: Thu, 07 Jan 2021 12:23:12 GMT
 recorded_with: VCR 6.0.0

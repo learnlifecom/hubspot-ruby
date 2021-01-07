@@ -25,7 +25,8 @@ module Hubspot
       end
 
       def opt_in(email:, type_id:, legal_explanation: "")
-        response = Hubspot::Connection.put_json(SUBSCRIPTION_PATH,
+        Hubspot::Connection.put_json(
+          SUBSCRIPTION_PATH,
           params: { email_address: email },
           body: {
             subscriptionStatuses: [
@@ -44,7 +45,8 @@ module Hubspot
       end
 
       def opt_out(email:, type_id:)
-        response = Hubspot::Connection.put_json(SUBSCRIPTION_PATH,
+        Hubspot::Connection.put_json(
+          SUBSCRIPTION_PATH,
           params: { email_address: email },
           body: {
             subscriptionStatuses: [
@@ -54,6 +56,16 @@ module Hubspot
                 optState: "OPT_OUT",
               }
             ],
+          }
+        )
+      end
+
+      def unsubscribe_all(email: )
+        Hubspot::Connection.put_json(
+          SUBSCRIPTION_PATH,
+          params: { email_address: email },
+          body: {
+            unsubscribeFromAll: true
           }
         )
       end

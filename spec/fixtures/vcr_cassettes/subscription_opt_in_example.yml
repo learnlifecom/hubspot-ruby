@@ -2,12 +2,10 @@
 http_interactions:
 - request:
     method: put
-    uri: https://api.hubapi.com/email/public/v1/subscriptions/john@doe.com?hapikey=demo
+    uri: https://api.hubapi.com/email/public/v1/subscriptions/john@doetest.com?hapikey=<POST_HAPI_KEY>
     body:
       encoding: UTF-8
-      string: '{"subscriptionStatuses":[{"id":8398069,"subscribed":true,"optState":"OPT_IN","legalBasis":"LEGITIMATE_INTEREST_CLIENT","legalBasisExplanation":"User
-        opted in through Leanlife platform."}],"portalSubscriptionLegalBasis":"LEGITIMATE_INTEREST_CLIENT","portalSubscriptionLegalBasisExplanation":"User
-        opted in through Leanlife platform."}'
+      string: '{"subscriptionStatuses":[{"id":8398069,"subscribed":true,"optState":"OPT_IN","legalBasis":"LEGITIMATE_INTEREST_CLIENT","legalBasisExplanation":"Explanation"}],"portalSubscriptionLegalBasis":"LEGITIMATE_INTEREST_CLIENT","portalSubscriptionLegalBasisExplanation":"Explanation"}'
     headers:
       Content-Type:
       - application/json
@@ -23,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 05 Jan 2021 13:09:18 GMT
+      - Thu, 07 Jan 2021 12:19:10 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
@@ -31,14 +29,14 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d350f2d25a789a89980e2e0f8db6b89b91609852158; expires=Thu, 04-Feb-21
-        13:09:18 GMT; path=/; domain=.hubapi.com; HttpOnly; SameSite=Lax
+      - __cfduid=d7751676761331b8819cc0f4a8cf7af321610021950; expires=Sat, 06-Feb-21
+        12:19:10 GMT; path=/; domain=.hubapi.com; HttpOnly; SameSite=Lax
       X-Trace:
-      - 2BE52DF41436FB23EA5CAABC935CAD90D92C8D401B000000000000000000
+      - 2BA5807A9D2F7A0C0099F15F4DA00FABA1DEDB5F8E000000000000000000
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249907'
+      - '249986'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Remaining:
@@ -56,7 +54,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Cf-Request-Id:
-      - '0774439a3a00001f4507ba0000000001'
+      - 077e626c9200002780fc979000000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Strict-Transport-Security:
@@ -64,9 +62,9 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 60cd6ed6cc331f45-FRA
+      - 60dda02759e92780-PRG
     body:
       encoding: UTF-8
       string: '{"success":true}'
-  recorded_at: Tue, 05 Jan 2021 13:09:18 GMT
+  recorded_at: Thu, 07 Jan 2021 12:19:10 GMT
 recorded_with: VCR 6.0.0

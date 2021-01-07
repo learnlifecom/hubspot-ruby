@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 05 Jan 2021 11:55:46 GMT
+      - Thu, 07 Jan 2021 12:24:31 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
@@ -27,18 +27,18 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=dc53128238bb6873fe4e9af0caa533c041609847746; expires=Thu, 04-Feb-21
-        11:55:46 GMT; path=/; domain=.hubapi.com; HttpOnly; SameSite=Lax
+      - __cfduid=dbb47a411972a6241026d6413a5aaf6631610022270; expires=Sat, 06-Feb-21
+        12:24:30 GMT; path=/; domain=.hubapi.com; HttpOnly; SameSite=Lax
       X-Trace:
-      - 2B96EB31BB1BE8A552FA7EA5F38FB24205F8FBC3E2000000000000000000
+      - 2B8634272A6344F2994EC58D62C380550D4FBBAA65000000000000000000
       X-Hubspot-Ratelimit-Daily:
       - '1000000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '999361'
+      - '999130'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Remaining:
-      - '158'
+      - '159'
       X-Hubspot-Ratelimit-Max:
       - '160'
       X-Hubspot-Ratelimit-Secondly:
@@ -52,7 +52,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Cf-Request-Id:
-      - '077400485a00001f2d0b92f000000001'
+      - 077e674fa50000410e912c6000000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Strict-Transport-Security:
@@ -60,7 +60,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 60cd03208b901f2d-FRA
+      - 60dda7f90aee410e-PRG
     body:
       encoding: ASCII-8BIT
       string: '{"subscriptionDefinitions":[{"id":354586,"portalId":62515,"name":"Abandoned
@@ -80,5 +80,5 @@ http_interactions:
         posts.","active":false,"internal":false},{"id":6497985,"portalId":62515,"name":"TestKimBlog
         Subscription","description":"Receive timely updates with the latest blog posts.","active":false,"internal":false},{"id":1281663,"portalId":62515,"name":"One
         to One","description":"One to One emails","active":true,"internal":true,"category":"Sales","channel":"Email","internalName":"ONE_TO_ONE"},{"id":4447431,"portalId":62515,"name":"MyTypeMSG","description":"MyMSG","active":true,"internal":false,"category":"Marketing","channel":"Email","order":0}]}'
-  recorded_at: Tue, 05 Jan 2021 11:55:46 GMT
+  recorded_at: Thu, 07 Jan 2021 12:24:31 GMT
 recorded_with: VCR 6.0.0
