@@ -238,7 +238,11 @@ module Hubspot
       singleton_class.instance_eval do
         keys.each do |k|
           # Define a getter
-          define_method(k) { @changes[k.to_sym] || @properties.dig(k, "value") }
+          define_method(k) do
+            return @changes[k.to_sym] if @changes.key?(k.to_sym)
+            return @properties.dig(k, "value") if @properties.dig(k).is_a?(Hash)
+            @properties.dig(k) # API version 3
+          end
 
           # Define a setter
           define_method("#{k}=") do |v|
