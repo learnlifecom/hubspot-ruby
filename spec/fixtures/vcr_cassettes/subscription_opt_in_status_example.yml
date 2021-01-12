@@ -1,0 +1,68 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.hubapi.com/email/public/v1/subscriptions/john@doetest.com?hapikey=<POST_HAPI_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 07 Jan 2021 12:19:11 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '242'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d05f1f6f3683a7aa156948dc16e59c05b1610021950; expires=Sat, 06-Feb-21
+        12:19:10 GMT; path=/; domain=.hubapi.com; HttpOnly; SameSite=Lax
+      X-Trace:
+      - 2B9FD2960D71DCAD94C53BC566FAC31AF9C4FA0011000000000000000000
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249985'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Remaining:
+      - '98'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '9'
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 077e626dae0000410dfe901000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 60dda0291e23410d-PRG
+    body:
+      encoding: ASCII-8BIT
+      string: '{"subscribed":true,"markedAsSpam":false,"unsubscribeFromPortal":false,"portalId":7104703,"bounced":false,"email":"john@doetest.com","subscriptionStatuses":[{"id":8398069,"updatedAt":1610021950723,"subscribed":true,"optState":"OPT_IN","legalBasis":"LEGITIMATE_INTEREST_CLIENT","legalBasisExplanation":"Explanation"}],"status":"subscribed"}'
+  recorded_at: Thu, 07 Jan 2021 12:19:11 GMT
+recorded_with: VCR 6.0.0

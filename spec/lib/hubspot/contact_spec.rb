@@ -165,6 +165,45 @@ RSpec.describe Hubspot::Contact do
     end
   end
 
+  describe '.recently_updated' do
+    before do
+      Hubspot.configure(hapikey: ENV["POST_HUBSPOT_HAPI_KEY"])
+    end
+
+    subject do
+      VCR.use_cassette("contact_recently_updated") do
+        described_class.recently_updated since: 1.day.ago
+      end
+    end
+
+    context 'when there is updated contacts' do
+      it 'has contacts' do
+        expect(subject).not_to be_empty
+        expect(subject.first).to be_a(described_class)
+      end
+    end
+
+    context 'when the query returns no contacts' do
+      subject do
+      VCR.use_cassette("contact_recently_updated_no_record") do
+        described_class.recently_updated since: 1.second.ago
+      end
+    end
+
+      it 'has no contacts' do
+        expect(subject).to be_empty
+      end
+
+      it 'does not have more' do
+        expect(subject.more?).to be_falsey
+      end
+
+      it 'does not have a next page' do
+        expect(subject.next_page?).to be_falsey
+      end
+    end
+  end
+
   describe '.merge' do
     context 'with valid contact ids' do
       cassette

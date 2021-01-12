@@ -1,0 +1,68 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.hubapi.com/email/public/v1/subscriptions/john@doetest.com?hapikey=<HAPI_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 07 Jan 2021 12:19:10 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=daf9c188d0408d350aadbc675724e7e031610021950; expires=Sat, 06-Feb-21
+        12:19:10 GMT; path=/; domain=.hubapi.com; HttpOnly; SameSite=Lax
+      X-Trace:
+      - 2B64A638A0610C35173D648697989879544D46AFA6000000000000000000
+      X-Hubspot-Ratelimit-Daily:
+      - '1000000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '999140'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Remaining:
+      - '159'
+      X-Hubspot-Ratelimit-Max:
+      - '160'
+      X-Hubspot-Ratelimit-Secondly:
+      - '16'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '15'
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 077e626b8300004125e9812000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 60dda0259d5d4125-PRG
+    body:
+      encoding: ASCII-8BIT
+      string: '{"subscribed":true,"markedAsSpam":false,"unsubscribeFromPortal":false,"portalId":62515,"bounced":false,"email":"john@doetest.com","subscriptionStatuses":[],"status":"subscribed"}'
+  recorded_at: Thu, 07 Jan 2021 12:19:10 GMT
+recorded_with: VCR 6.0.0

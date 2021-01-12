@@ -1,0 +1,68 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.hubapi.com/email/public/v1/subscriptions/john@doetest.com?hapikey=<POST_HAPI_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 07 Jan 2021 12:19:11 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '198'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d47db67463d8752e8a9991e30b448ddcf1610021951; expires=Sat, 06-Feb-21
+        12:19:11 GMT; path=/; domain=.hubapi.com; HttpOnly; SameSite=Lax
+      X-Trace:
+      - 2BCA2E5D48CF3FA95C7F64CB05529480EB3FD3B328000000000000000000
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249983'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Remaining:
+      - '96'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '9'
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 077e626fd000004120449c7000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 60dda02c7ae34120-PRG
+    body:
+      encoding: ASCII-8BIT
+      string: '{"subscribed":true,"markedAsSpam":false,"unsubscribeFromPortal":false,"portalId":7104703,"bounced":false,"email":"john@doetest.com","subscriptionStatuses":[{"id":8398069,"updatedAt":1610021951240,"subscribed":false,"optState":"OPT_OUT"}],"status":"subscribed"}'
+  recorded_at: Thu, 07 Jan 2021 12:19:11 GMT
+recorded_with: VCR 6.0.0

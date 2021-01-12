@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.hubapi.com/crm/v3/objects/contacts/search?hapikey=<POST_HAPI_KEY>
+    body:
+      encoding: UTF-8
+      string: '{"filterGroups":[{"filters":[{"value":"1609970034541","propertyName":"lastmodifieddate","operator":"GTE"}]}],"after":null,"limit":25}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 06 Jan 2021 21:53:55 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '24'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d60222edc52574238253cb62f96ddd85c1609970035; expires=Fri, 05-Feb-21
+        21:53:55 GMT; path=/; domain=.hubapi.com; HttpOnly; SameSite=Lax
+      X-Trace:
+      - 2B216C89B7E67CD2D684235C4C3171D6A438E93141000000000000000000
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249854'
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 077b4a4402000027c02a247000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 60d8acb32c7527c0-PRG
+    body:
+      encoding: UTF-8
+      string: '{"total":0,"results":[]}'
+  recorded_at: Wed, 06 Jan 2021 21:53:55 GMT
+recorded_with: VCR 6.0.0

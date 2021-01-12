@@ -12,6 +12,7 @@ class Hubspot::Contact < Hubspot::Resource
   MERGE_PATH              = '/contacts/v1/contact/merge-vids/:id/'
   SEARCH_PATH             = '/contacts/v1/search/query'
   UPDATE_PATH             = '/contacts/v1/contact/vid/:id/profile'
+  SEARCH_V3_PATH          = '/crm/v3/objects/contacts/search'
 
   class << self
     def all(opts = {})
@@ -39,6 +40,37 @@ class Hubspot::Contact < Hubspot::Resource
 
     def create(email, properties = {})
       super(properties.merge("email" => email))
+    end
+
+    def recently_updated(since:, per_page: 25)
+      opts = { limit: per_page, offset_param: :after }
+      since_timestamp = since.strftime('%s%3N')
+
+      Hubspot::PagedCollection.new(opts) do |options, offset, limit|
+        response = Hubspot::Connection.post_json(
+          SEARCH_V3_PATH,
+          params: {},
+          body: {
+            filterGroups: [
+              {
+                filters: [
+                  {
+                    value: since_timestamp,
+                    propertyName: "lastmodifieddate",
+                    operator: "GTE"
+                  }
+                ]
+              }
+            ],
+            after: offset,
+            limit: limit
+          }
+        )
+
+        contacts = response["results"].map { |result| from_result(result) }
+        next_page = response.dig("paging", "next", "after")
+        [contacts, next_page, next_page.present? ]
+      end
     end
 
     def create_or_update(email, properties = {})

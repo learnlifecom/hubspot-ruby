@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://api.hubapi.com/email/public/v1/subscriptions/john@doetest.com?hapikey=<POST_HAPI_KEY>
+    body:
+      encoding: UTF-8
+      string: '{"subscriptionStatuses":[{"id":8398069,"subscribed":true,"optState":"OPT_IN","legalBasis":"LEGITIMATE_INTEREST_CLIENT","legalBasisExplanation":"Explanation"}],"portalSubscriptionLegalBasis":"LEGITIMATE_INTEREST_CLIENT","portalSubscriptionLegalBasisExplanation":"Explanation"}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 07 Jan 2021 12:19:10 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '16'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d7751676761331b8819cc0f4a8cf7af321610021950; expires=Sat, 06-Feb-21
+        12:19:10 GMT; path=/; domain=.hubapi.com; HttpOnly; SameSite=Lax
+      X-Trace:
+      - 2BA5807A9D2F7A0C0099F15F4DA00FABA1DEDB5F8E000000000000000000
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249986'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Remaining:
+      - '99'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '9'
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 077e626c9200002780fc979000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 60dda02759e92780-PRG
+    body:
+      encoding: UTF-8
+      string: '{"success":true}'
+  recorded_at: Thu, 07 Jan 2021 12:19:10 GMT
+recorded_with: VCR 6.0.0
